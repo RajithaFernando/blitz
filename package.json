@@ -1,0 +1,19 @@
+{
+  "name": "blitz",
+  "version": "1.0.0",
+  "description": "oh man !!",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    
+  },
+  "author": "Rajitha Fernando",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^1.18.11"
+  },
+  "dependencies": {
+    "concurrently": "^4.1.0"
+  }
+}
