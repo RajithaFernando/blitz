@@ -4,10 +4,11 @@
   "description": "oh man !!",
   "main": "server.js",
   "scripts": {
+    "client-install":"npm install --prefix client",
     "start": "node server.js",
     "server": "nodemon server.js",
     "client":"npm start --prefix myidea",
-    "dev":"concurrently \" npm run server\" \" npm run client \" "
+    "dev":"concurrently \" npm run server\" \" npm run client \" "  
   },
   "author": "Rajitha Fernando",
   "license": "MIT",

@@ -4,14 +4,11 @@ const schema = mongoose.Schema
 
 // creating a Schema
 const postSchema = new schema({
-    username :{
+    username:{
         type: String,
         required: true    
     },
-    // content:{
-    //     type: String,
-    //     required: true
-    // },
+    
     date:{
         type: Date,
         default: Date.now

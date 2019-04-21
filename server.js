@@ -7,7 +7,7 @@ const app = express()
 
 const postsrout =  require('./routs/api/postsrouts') 
 
-app.use('/api/postrouts', postsrout)
+
 // so, anything goes to 'api/postrouts' will go to  './routs/api/postsrouts '
 
 
@@ -25,6 +25,9 @@ mongoose.connect(db).then(()=>{
     console.log('error Connecting to database')
     console.log(error)
 })
+
+
+app.use('/api/postrouts', postsrout) 
 
 const port = process.env.PORT || 5000
 

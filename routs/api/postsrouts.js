@@ -2,13 +2,13 @@ const express = require('express')
 const router = express.Router()
 
 // bringig posts model
-const postmodel = require('../../models/posts')
+const posts = require('../../models/posts')
 
 // @route   GET request to, 'api/postsrouts'
 // @discription  Get all posts from database
 // @access : Public
 router.get('/', (req,res)=>{
-    postmodel.find().then((posts)=>{
+    posts.find().then((posts)=>{
         res.json(posts)
         // join request with posts from database
         //  
@@ -27,17 +27,14 @@ router.get('/', (req,res)=>{
 // @discription  Add new posts to database
 // @access : Public
 router.post('/', (req,res)=>{
-    const newPost = new postmodel({
-        username :req.body.name
+    const newPost = new posts({
+        username: req.body.username
         
     })
-    newPost.save().then((post)=>{
-        res.json(post)
+    newPost.save().then((posts)=>{
+        res.json(posts)
     })
 })
-
-
-
 
 
 module.exports = router
